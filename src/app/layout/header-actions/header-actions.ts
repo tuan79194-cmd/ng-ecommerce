@@ -1,15 +1,20 @@
 import { Component } from '@angular/core';
-import { MatIconButton } from '@angular/material/button';
+import { MatButton, MatIconButton } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-header-actions',
-  imports: [MatIconButton, MatIcon],
+  imports: [MatButton, MatIconButton, MatIcon],
   template: `
     <div class="flex items-center gap-2">
-      <button matIconButton aria-label="Yêu thích">
+      <button matIconButton>
         <mat-icon>favorite</mat-icon>
       </button>
+      <button matIconButton>
+        <mat-icon>shopping-cart</mat-icon>
+      </button>
+      <button matButton="elevated">Sign In</button>
+      <button matButton="filled">Sign Up</button>
     </div>
   `,
   styles: ``,
